@@ -1,188 +1,211 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-  <title>typescript</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<body background="77745456-fondo.webp">
 
-  <!-- Bootstrap CSS v5.2.1 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <head>
+    <title> Formulario de Calificaciones</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-</head>
-<body>
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+  </head>
   <center>
-  <h1>Fernanda Marcillo 3ro B</h1>
-  <h2>
-  FORMULARIOS
-  </h2>
-</center>
-  <main>
+    <h1 style="color: white;">PROYECTO DE FORMULARIOS</h1>
+    <h2 style="color: white;">FERNANDA MARCILLO 3ro B</h2>
+  </center>
 
-    <div class="container">
-      <div class="card">
-        <div class="card-header">
-          ESTUDIANTE
+  <body>
+    <main>
+      <div class="container" >
+        <div class="card" style="width: 400px; margin:  0 auto; background-color: bisque;
+        padding: 2px; border-radius: 10px; ">
+          <div class="card-header" >
+            ESTUDIANTE
+          </div>
+          <div class="card-body">
+            <div class="mb-3">
+              <label for="fullName" class="form-label">Nombre:</label>
+              <input type="text" name="fullName" id="fullName" class="form-control"
+                placeholder="MARIA FERNANDA MARCILLO GUANIN">
+            </div>
+            <div class="mb-3">
+              <label for="identification" class="form-label">Identificación:</label>
+              <input type="text" name="identification" id="identification" class="form-control" placeholder="1727793711"
+                maxlength="10">
+            </div>
+            <div class="mb-3">
+              <label for="mail" class="form-label">Correo:</label>
+              <input type="text" name="mail" id="mail" class="form-control" placeholder="mfg.marcillo@yavirac.edu.ec">
+            </div>
+            <div class="mb-3">
+              <label for="direction" class="form-label">Dirección:</label>
+              <input type="text" name="direction" id="direction" class="form-control" placeholder="SANGOLQUI">
+            </div>
+            <div class="mb-3">
+              <label for="enrollment" class="form-label">Matrícula:</label>
+              <input type="text" name="enrollment" id="enrollment" class="form-control" placeholder="01">
+            </div>
+            <div class="mb-3">
+              <label for="level" class="form-label">Nivel:</label>
+              <input type="text" name="level" id="level" class="form-control" placeholder="Tercero">
+            </div>
+          </div>
+          <div class="card-footer text-muted">
+            <button style="background-color:pink; border-color: rebeccapurple; color: black" class="btn btn-primary"
+              onclick="addStudent()">Agregar estudiante</button>
+          </div>
         </div>
-        <div class="card-body">
-          <div class="mb-3">
-            <label for="fullName" class="form-label">Nombre:</label>
-            <input type="text" name="fullName" id="fullName" class="form-control" placeholder="Juan Pedro Perez">
+        <hr>
+        <div class="card"  style="width: 400px; margin:  0 auto; background-color: bisque;
+        padding: 2px; border-radius: 10px; ">
+          <div class="card-header">
+            DOCENTE
           </div>
-          <div class="mb-3">
-            <label for="identification" class="form-label">Identificación:</label>
-            <input type="text" name="identification" id="identification" class="form-control" placeholder="17342321">
+          <div class="card-body">
+            <div class="mb-3">
+              <label for="fullName-teacher" class="form-label">Nombre:</label>
+              <input type="text" name="fullName-teacher" id="fullName-teacher" class="form-control"
+                placeholder="LORENA CHULDE">
+            </div>
+            <div class="mb-3">
+              <label for="identification-teacher" class="form-label">Identificación:</label>
+              <input type="text" name="identification-teacher" id="identification-teacher" class="form-control"
+                placeholder="1782728282" maxlength="10">
+            </div>
+            <div class="mb-3">
+              <label for="mail-teacher" class="form-label">Correo:</label>
+              <input type="text" name="mail-teacher" id="mail-teacher" class="form-control"
+                placeholder="lorena_chulde@yavirac.edu.ec">
+            </div>
+            <div class="mb-3">
+              <label for="direction-teacher" class="form-label">Dirección:</label>
+              <input type="text" name="direction-teacher" id="direction-teacher" class="form-control"
+                placeholder="QUITO">
+            </div>
+            <div class="mb-3">
+              <label for="title-teacher" class="form-label">Título:</label>
+              <input type="text" name="title-teacher" id="title-teacher" class="form-control"
+                placeholder="PROGRAMACION VISUAL">
+            </div>
+            <div class="mb-3">
+              <label for="area-teacher" class="form-label">Area: </label>
+              <select class="form-select" name="" id="area-teacher">
+              </select>
+            </div>
+
           </div>
-          <div class="mb-3">
-            <label for="mail" class="form-label">Correo:</label>
-            <input type="text" name="mail" id="mail" class="form-control" placeholder="lore@yavirac.edu.ec">
-          </div>
-          <div class="mb-3">
-            <label for="direction" class="form-label">Dirección:</label>
-            <input type="text" name="direction" id="direction" class="form-control" placeholder="Juan Pedro Perez">
-          </div>
-          <div class="mb-3">
-            <label for="enrollment" class="form-label">Matrícula:</label>
-            <input type="text" name="enrollment" id="enrollment" class="form-control" placeholder="01">
-          </div>
-          <div class="mb-3">
-            <label for="level" class="form-label">Nivel:</label>
-            <input type="text" name="level" id="level" class="form-control" placeholder="Tercero">
+          <div class="card-footer text-muted">
+            <button style="background-color:pink; border-color: rebeccapurple; color: black" class="btn btn-primary" onclick="addTeacher()">Agregar profesor</button>
           </div>
         </div>
-        <div class="card-footer text-muted">
-          <button class="btn btn-primary" onclick="addStudent()">Agregar estudiante</button>
+        <hr>
+        <div class="card"  style="width: 400px; margin:  0 auto; background-color: bisque;
+        padding: 2px; border-radius: 10px; ">
+          <div class="card-header">
+            ACTIVIDAD
+          </div>
+          <div class="card-body" style="width: 390px; margin:  0 auto; background-color: bisque;
+          padding: 2px; border-radius: 10px; ">
+            <div class="mb-3">
+              <label for="name-activity" class="form-label">Nombre:</label>
+              <input type="text" class="form-control" id="name-activity" placeholder="Examen">
+            </div>
+          </div>
+          <div class="card-footer text-muted">
+            <button style="background-color:pink; border-color: rebeccapurple; color: black" class="btn btn-primary" onclick="addActivity()">Agregar actividad</button>
+          </div>
+        </div>
+        <hr>
+        <div class="card"style="width: 400px; margin:  0 auto; background-color: bisque;
+        padding: 2px; border-radius: 10px; ">
+          <div class="card-header">
+            LIBRO DE CALIFICACIONES
+          </div>
+          <div class="card-body">
+            <div class="mb-3">
+              <label for="value-gradebook" class="form-label">Valor:</label>
+              <input type="text" name="value-gradebook" id="value-gradebook" class="form-control" placeholder="100">
+            </div>
+            <div class="mb-3">
+              <label for="course-gradebook" class="form-label">Curso:</label>
+              <input type="text" class="form-control" id="course-gradebook" placeholder="Tercero">
+            </div>
+            <div class="mb-3">
+              <label for="activity" class="form-label">Actividad:</label>
+              <select class="form-select" name="activity" id="activity">
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="maximungrade-gradebook" class="form-label">Nota máxima:</label>
+              <input type="text" name="maximungrade-gradebook" id="maximungrade-gradebook" class="form-control"
+                placeholder="100">
+            </div>
+          </div>
+          <div class="card-footer text-muted">
+            <button style="background-color:pink; border-color: rebeccapurple; color: black" class="btn btn-primary" onclick="addGradeBookSetup()">Agregar
+              calificaciones</button>
+          </div>
+
+        </div>
+        <hr>
+        <div class="card" style="width: 400px; margin:  0 auto; background-color: bisque;
+        padding: 2px; border-radius: 10px; ">
+          <div class="card-header">
+            DETALLE DE CALIFICACIONES
+          </div>
+          <div class="card-body">
+            <div class="mb-3">
+              <label for="datail-student" class="form-label">Estudiante:</label>
+              <select name="student" class="form-select" id="detail-student"></select>
+            </div>
+            <div class="mb-3">
+              <label for="detail-course" class="form-label">Curso:</label>
+              <select name="detail-course" class="form-select" id="detail-course">
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="detail-note" class="form-label">Nota:</label>
+              <input type="text" id="detail-note" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label for="detail-teacher" class="form-label">Docente:</label>
+              <select name="detail-teacher" class="form-select" id="detail-teacher"></select>
+            </div>
+            <div class="mb-3">
+              <label for="cualification" class="form-label">Estado:</label>
+              <select name="detail-qualification" class="form-select" id="detail-qualification"></select>
+            </div>
+          </div>
+          <div class="card-footer text-muted">
+            <button style="background-color:pink; border-color: rebeccapurple; color: black" class="btn btn-primary" onclick="addDetailOfQualifications()">Agregar detalle</button>
+          </div>
+          
         </div>
       </div>
-      <hr>
-      <div class="card">
-        <div class="card-header">
-          PROFESOR
-        </div>
-        <div class="card-body">
-          <div class="mb-3">
-            <label for="fullName-teacher" class="form-label">Nombre:</label>
-            <input type="text" name="fullName-teacher" id="fullName-teacher" class="form-control"
-              placeholder="Pedro Infante">
-          </div>
-          <div class="mb-3">
-            <label for="identification-teacher" class="form-label">Identificación:</label>
-            <input type="text" name="identification-teacher" id="identification-teacher" class="form-control"
-              placeholder="1734324">
-          </div>
-          <div class="mb-3">
-            <label for="mail-teacher" class="form-label">Correo:</label>
-            <input type="text" name="mail-teacher" id="mail-teacher" class="form-control" placeholder="Quitumbe">
-          </div>
-          <div class="mb-3">
-            <label for="direction-teacher" class="form-label">Dirección:</label>
-            <input type="text" name="direction-teacher" id="direction-teacher" class="form-control"
-              placeholder="Quitumbe">
-          </div>
-          <div class="mb-3">
-            <label for="title-teacher" class="form-label">Título:</label>
-            <input type="text" name="title-teacher" id="title-teacher" class="form-control" placeholder="01">
-          </div>
-          <div class="mb-3">
-            <label for="area-teacher" class="form-label">Area: </label>
-            <select class="form-select form-select-lg" name="" id="area-teacher">
-            </select>
-          </div>
-
-        </div>
-        <div class="card-footer text-muted">
-          <button class="btn btn-primary" onclick="addTeacher()">Agregar profesor</button>
-        </div>
       </div>
-      <hr>
-      <div class="card">
-        <div class="card-header">
-          ACTIVIDAD
-        </div>
-        <div class="card-body">
-          <div class="mb-3">
-            <label for="name-activity" class="form-label">Nombre:</label>
-            <input type="text" name="name-activity" id="name-activity" class="form-control" placeholder="examen">
-          </div>
-        </div>
-        <div class="card-footer text-muted">
-          <button class="btn btn-primary" onclick="addActivity()">Agregar actividad</button>
-        </div>
+
       </div>
-      <hr>
-      <div class="card">
-        <div class="card-header">
-          LIBRO DE CALIFICACIONES
-        </div>
-        <div class="card-body">
-          <div class="mb-3">
-            <label for="value-gradebook" class="form-label">Valor:</label>
-            <input type="text" name="value-gradebook" id="value-gradebook" class="form-control" placeholder="100%">
-          </div>
-          <div class="mb-3">
-            <label for="course-gradebook" class="form-label">Curso:</label>
-            <select class="form-select form-select-lg" name="course-gradebook" id="course-gradebook">
-            </select>
-          </div>
-          <div class="mb-3">
-            <label for="activity-gradebook" class="form-label">Actividad:</label>
-            <select class="form-select form-select-lg" name="activity-gradebook" id="activity-gradebook">
-            </select>
-          </div>
-          <div class="mb-3">
-            <label for="maximungrade-gradebook" class="form-label">Nota máxima:</label>
-            <input type="text" name="maximungrade-gradebook" id="maximungrade-gradebook" class="form-control" placeholder="100%">
-          </div>
-        </div>
-        <div class="card-footer text-muted">
-          <button class="btn btn-primary" onclick="addActivity()">Agregar actividad</button>
-        </div>
-    <hr>
-    <div class="card">
-        <div class="card-header">
-        <div class="card-body">
-           TARGETA
-        </div>
-          <div class="mb-3">
-            <label for="name-activity" class="form-label">Estudiante:</label>
-            <input type="text" name="name-activity" id="name-activity" class="form-control" placeholder="examen">
-          </div>
-          <div class="mb-3">
-            <label for="course-gradebook" class="form-label">Curso:</label>
-            <select class="form-select form-select-lg" name="course-gradebook" id="course-gradebook">
-            </select>
-          </div>
-          <div class="mb-3">
-            <label for="maximungrade-gradebook" class="form-label">Nota</label>
-            <input type="text" name="gradebook" id="gradebook" class="form-control" placeholder="100%">
-          </div>
-          <div class="mb-3">
-            <label for="fullName-teacher" class="form-label">Profesor:</label>
-            <input type="text" name="fullName-teacher" id="fullName-teacher" class="form-control"
-              placeholder="Pedro Infante">
-        </div>
-        </div>
-         <div class="card-footer text-muted">
-          <button class="btn btn-primary" onclick="addActivity()">Agregar Targeta</button>
-        </div>
+      <script>let exports = {}; </script>
+      <script src="dist/main.js"></script>
 
-    <script>let exports = {}; </script>
-    <script src="dist/main.js"></script>
+    </main>
+    <footer>
+      <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+      </script>
 
-  </main>
-  <footer>
-    <!-- place footer here -->
-  </footer>
-  <!-- Bootstrap JavaScript Libraries -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-    </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
-    </script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+      </script>
+  </body>
 
 </html>
+</body>
